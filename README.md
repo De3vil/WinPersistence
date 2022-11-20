@@ -88,8 +88,6 @@ New-NetFirewallRule -Name morph3inbound -DisplayName morph3inbound -Enabled True
 
 ### Virtual Machines
 
-> Based on the Shadow Bunny technique.
-
 ```ps1
 # download virtualbox
 Invoke-WebRequest "https://download.virtualbox.org/virtualbox/6.1.8/VirtualBox-6.1.8-137981-Win.exe" -OutFile $env:TEMP\VirtualBox-6.1.8-137981-Win.exe
